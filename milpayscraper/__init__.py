@@ -64,7 +64,7 @@ def scrape_pdf(file_name):
     data_df.set_index("Rank", inplace=True)
 
     print(data_df.head())
-    data_df.to_csv(f'{datasets_dir}/annual_pay_scales/{os.path.basename(file_name)[:-3]}.csv', index=True)
+    data_df.to_csv(f'{datasets_dir}/annual_pay_scales/{os.path.basename(file_name)[:-4]}.csv', index=True)
 
 
 #get_AD_pay_charts()

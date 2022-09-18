@@ -1,0 +1,3547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema#  fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+          <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"c3ba172f92",applicationID:"959924510"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://www.military.com/benefits/military-pay/2013-pay-charts.html" />
+<meta name="description" content="The National Defense Authorization Act of 2013 includes a 1.7 percent across-the-board base pay raise  for 2013. This raise is .1% percent more than the 2012 military pay increase and remains among the smallest increases since 1962.The following tables reflect the 2012 monthly pay based on the 1.6 percent pay raise, which went into effect Jan. 1, 2012." />
+<meta property="fb:app_id" content="140586622674265" />
+<meta property="og:site_name" content="Military.com" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.military.com/benefits/military-pay/2013-pay-charts.html" />
+<meta property="og:title" content="2013 Military Pay Charts" />
+<meta property="og:description" content="The National Defense Authorization Act of 2013 includes a 1.7 percent across-the-board base pay raise  for 2013. This raise is .1% percent more than the 2012 military pay increase and remains among the smallest increases since 1962.The following tables reflect the 2012 monthly pay based on the 1.6 percent pay raise, which went into effect Jan. 1, 2012." />
+<meta property="og:updated_time" content="2017-10-31T10:53:49-07:00" />
+<meta property="article:publisher" content="https://www.facebook.com/Militarydotcom" />
+<meta property="article:section" content="Military Pay" />
+<meta property="article:published_time" content="2017-10-31T10:53:49-07:00" />
+<meta property="article:modified_time" content="2017-10-31T10:53:49-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="The National Defense Authorization Act of 2013 includes a 1.7 percent across-the-board base pay raise  for 2013. This raise is .1% percent more than the 2012 military pay increase and remains among the smallest increases since 1962.The following tables reflect the 2012 monthly pay based on the 1.6 percent pay raise, which went into effect Jan. 1, 2012." />
+<meta name="twitter:site" content="@militarydotcom" />
+<meta name="twitter:title" content="2013 Military Pay Charts" />
+<meta name="twitter:site:id" content="14692385" />
+<meta name="twitter:creator" content="@militarydotcom" />
+<meta name="twitter:creator:id" content="14692385" />
+<meta name="twitter:url" content="https://www.military.com/benefits/military-pay/2013-pay-charts.html" />
+<meta name="twitter:image:alt" content="2013 Military Pay Charts" />
+<link rel="amphtml" href="https://www.military.com/benefits/military-pay/2013-pay-charts.html/amp" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="article:tag" content="Military Pay" />
+<meta name="robots" content="max-image-preview:large" />
+<script>function OptanonWrapper() {}</script>
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsArticle",
+            "headline": "2013 Military Pay Charts",
+            "datePublished": "April 12, 2017",
+            "dateModified": "October 31, 2017",
+            "author": {
+                "@type": "Organization",
+                "name": "Military.com"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Military.com",
+                "url": "https://www.military.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://images.military.com/themes/military/logo.png"
+                }
+            },
+            "mainEntityOfPage": "https://www.military.com/benefits/military-pay/2013-pay-charts.html"
+        },
+        {
+            "@type": "WebPage",
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Benefits",
+                        "item": "https://www.military.com/benefits"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Military Pay",
+                        "item": "https://www.military.com/benefits/military-pay"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "WebSite",
+            "name": "Military.com",
+            "url": "https://www.military.com/"
+        }
+    ]
+}</script>
+<script>(function() {
+     /** CONFIGURATION START **/
+     var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+     _sf_async_config.uid = 65633;
+     _sf_async_config.domain = 'military.com';
+     _sf_async_config.flickerControl = false;
+     _sf_async_config.useCanonical = true;
+     _sf_async_config.useCanonicalDomain = true;
+     /** CONFIGURATION END **/
+     })();</script>
+<script src="//static.chartbeat.com/js/chartbeat_mab.js" async="true"></script>
+<link rel="icon" href="/themes/military/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="//images02.military.com/sites/default/files/google_tag/primary/google_tag.script.js?ri7apv" defer></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_config.thanks = {
+    postShare: false
+};
+
+a2a_config.prioritize = [ 'facebook', 'twitter', 'whatsapp', 'email','linkedin','pinterest', 'copy_link', 'sms' ];
+a2a_config.num_services = 8;</script>
+
+      <title>2013 Military Pay Charts | Military.com</title>
+      <link rel="stylesheet" media="all" href="//images03.military.com/sites/default/files/css/css_sFhHiPl_InyHgtBJx1mYblEFpnJ79YfJNl7u2ajy3T8.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,300i,400,500,500i,700,700i|Roboto+Slab:500&amp;display=swap" />
+<link rel="stylesheet" media="all" href="//images05.military.com/sites/default/files/css/css_hWUBToQj2JVVdq0gB6pl-gHnZmgUP3nH2CXz77TWu_c.css" />
+
+      <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/40861","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"mil_ads":{"opts":{"member":3525,"keywords":{"section":"Benefits","subsection":["Military Pay"],"articletag":["Military Pay","2013","Military","Pay","Charts"],"url":"\/benefits\/military-pay\/2013-pay-charts.html"}},"tags":{"adblock-sponsor-ads":{"sizeMapping":[{"minWidth":"320","sizes":[["1","1"],["320","100"]]},{"minWidth":"600","sizes":[["1","1"],["562","100"],["320","100"]]},{"minWidth":"768","sizes":[[""]]}],"position":"MobileSponsoredLink","tag_id":13472975,"targetId":"adblock-sponsor-ads"},"adblock-sponsor-ads2":{"sizeMapping":[{"minWidth":"768","sizes":[["412","52"]]},{"minWidth":"320","sizes":[[""]]}],"position":"DesktopSponsoredLink","tag_id":13472952,"targetId":"adblock-sponsor-ads2"},"adblock-below-body-ads":{"sizeMapping":[{"minWidth":"320","sizes":[["320","50"],["300","250"],["320","51"]]},{"minWidth":"768","sizes":[[""]]}],"position":"MobileMiddle","tag_id":13472973,"targetId":"adblock-below-body-ads"},"adblock-6125239970d6f-AnchorAd":{"sizeMapping":[{"minWidth":"320","sizes":[["325","42"]]},{"minWidth":"768","sizes":[[""]]}],"position":"AnchorAd","tag_id":13472972,"targetId":"adblock-6125239970d6f"},"adblock-6125238b27d03-Military-Desktop-Anchor":{"sizeMapping":[{"minWidth":"768","sizes":[["1","1"],["728","92"]]},{"minWidth":"320","sizes":[[""]]}],"position":"Military_Desktop_Anchor","tag_id":20999553,"targetId":"adblock-6125238b27d03"},"adblock-5ef128a5ca947-Bottom":{"sizeMapping":[{"minWidth":"768","sizes":[["728","90"],["728","91"]]},{"minWidth":"320","sizes":[[""]]}],"position":"Bottom","tag_id":13472949,"targetId":"adblock-5ef128a5ca947"},"adblock-5f330e3b73386-MobileBottom":{"sizeMapping":[{"minWidth":"320","sizes":[["320","50"],["300","250"],["320","52"]]},{"minWidth":"768","sizes":[[""]]}],"position":"MobileBottom","tag_id":13472974,"targetId":"adblock-5f330e3b73386"},"adblock-5fff1f13e709f-Military-Mobile-Interstitial":{"sizeMapping":[{"minWidth":"320","sizes":[["1","1"]]},{"minWidth":"768","sizes":[[""]]}],"position":"Military_Mobile_Interstitial","tag_id":20143527,"targetId":"adblock-5fff1f13e709f"},"adblock-5fff1f13e7019-Military-Desktop-Interstitial":{"sizeMapping":[{"minWidth":"768","sizes":[["1","1"]]},{"minWidth":"320","sizes":[[""]]}],"position":"Military_Desktop_Interstitial","tag_id":19536566,"targetId":"adblock-5fff1f13e7019"},"adblock-5bbf8c897a6c0-FP2":{"sizeMapping":[{"minWidth":"768","sizes":[["300","100"],["300","101"],["300","130"]]},{"minWidth":"320","sizes":[[""]]}],"position":"FP2","tag_id":13472954,"targetId":"adblock-5bbf8c897a6c0"},"adblock-5bbf8c897a574-RightBottom":{"sizeMapping":[{"minWidth":"768","sizes":[["300","250"],["300","600"],["300","251"]]},{"minWidth":"320","sizes":[[""]]}],"position":"RightBottom","tag_id":13472965,"targetId":"adblock-5bbf8c897a574"},"adblock-5bbf8c897a44a-FP1":{"sizeMapping":[{"minWidth":"768","sizes":[["300","100"],["300","130"]]},{"minWidth":"320","sizes":[[""]]}],"position":"FP1","tag_id":13472953,"targetId":"adblock-5bbf8c897a44a"},"adblock-5b871bbb87bb8-RightTop":{"sizeMapping":[{"minWidth":"768","sizes":[["300","250"],["300","600"],["300","1050"]]},{"minWidth":"320","sizes":[[""]]}],"position":"RightTop","tag_id":13472966,"targetId":"adblock-5b871bbb87bb8"},"content-adblock-63231f920c404":{"sizeMapping":[{"minWidth":"768","sizes":[["300","250"],["1","1"]]},{"minWidth":"320","sizes":[[""]]}],"position":"FPArticle2","tag_id":18519415,"targetId":"content-adblock-63231f920c404"},"content-adblock-63231f920c407":{"sizeMapping":[{"minWidth":"320","sizes":[["1","1"],["300","250"]]},{"minWidth":"768","sizes":[[""]]}],"position":"Military_Mobile_FPArticle 2","tag_id":20383147,"targetId":"content-adblock-63231f920c407"},"content-adblock-63231f920bb11":{"sizeMapping":[{"minWidth":"768","sizes":[["1","1"],["628","100"]]},{"minWidth":"320","sizes":[[""]]}],"position":"FPArticle","tag_id":13472957,"targetId":"content-adblock-63231f920bb11"},"content-adblock-63231f920bb15":{"sizeMapping":[{"minWidth":"320","sizes":[["1","1"],["300","100"]]},{"minWidth":"768","sizes":[[""]]}],"position":"Military_Mobile_FPArticle","tag_id":18433746,"targetId":"content-adblock-63231f920bb15"},"adblock-5ef126226826a-MobileTop":{"sizeMapping":[{"minWidth":"320","sizes":[["320","50"],["1","1"]]},{"minWidth":"768","sizes":[[""]]}],"position":"MobileTop","tag_id":13472976,"targetId":"adblock-5ef126226826a"},"adblock-5ef126022a816-Top":{"sizeMapping":[{"minWidth":"768","sizes":[["728","90"],["970","90"],["970","250"],["970","91"]]},{"minWidth":"320","sizes":[[""]]}],"position":"Top","tag_id":13472970,"targetId":"adblock-5ef126022a816"},"adblock-5ef12a90ee46b-BrandscapeRight":{"sizeMapping":[{"minWidth":"768","sizes":[["160","1500"]]},{"minWidth":"320","sizes":[[""]]}],"position":"BrandscapeRight","tag_id":13472951,"targetId":"adblock-5ef12a90ee46b"},"adblock-5ef12a76b3c33-BrandscapeLeft":{"sizeMapping":[{"minWidth":"768","sizes":[["160","1501"]]},{"minWidth":"320","sizes":[[""]]}],"position":"BrandscapeLeft","tag_id":13472950,"targetId":"adblock-5ef12a76b3c33"}}},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"39a22482824c1b6962b8a0599c640bab0f85ce0040bdb5ab298e4de049c28292"}}</script>
+<script src="//images04.military.com/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7"></script>
+<script src="//images04.military.com/sites/default/files/js/js_vjrewt9Ub_VdOnWG7fQvzLvZnbEPsJs5UlnSApFDVF0.js"></script>
+<script src="//images05.military.com/core/misc/modernizr-additional-tests.js?v=3.11.7"></script>
+<script src="//images01.military.com/sites/default/files/js/js_AV6nIhcOGYoPgLI6Wd0ddGg8nSCjY-phywC7Nh3DJ1o.js"></script>
+<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>
+<script src="//images02.military.com/sites/default/files/js/js_GldAiMsb9nCjrdHEV3yf6Fh7yUr6dF6iymX3EdanN2I.js"></script>
+
+      </head>
+  <body class="path--node path--benefits path--benefitsmilitary-pay2013-pay-chartshtml page-node-type-article variant--desktop">
+    <div id="pagewrapper">
+      <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJK2CRM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+<div class="page">
+      
+
+  <header id="header">
+    <div class="container-fluid">
+              
+
+<section class="header--mobile">
+      
+
+
+
+<a href=/ class="button button--icon button--icon--bars" aria-label="bars" data-target="">
+  
+<i class="icon icon-bars"></i>
+</a>
+  
+      <a href="/" class="branding">
+      <img src="//images.military.com/themes/military/logo.svg" alt="Military.com Logo"
+           onerror="this.onerror=null; this.src='//images.military.com/themes/military/logo.png'"/>
+    </a>
+  
+      
+
+
+
+<a href=/ class="button button--icon button--icon--close" aria-label="close" data-target="">
+  
+<i class="icon icon-close"></i>
+</a>
+  
+  
+
+
+
+      <nav class="block block--system-menu-block-main">
+    
+    
+
+      
+
+
+
+
+        <ul class="menu menu--main">
+              <li class="menu--account__anonymous--mobile">
+        <a href="http://www.military.com/member-reg/login.html?vlv_redir=http%3A%2F%2Fwww.military.com%2F">Login</a>
+      </li>
+      <li class="menu--account__authenticated--mobile">
+        <a href="http://www.military.com/profile/member-profile.html">Profile</a>
+        <ul>
+  <li><a href="https://www.military.com/profile/member-profile.html">Profile</a></li>
+  <li><a href="https://www.military.com/resumes/">Resumes</a></li>
+  <li><a href="https://www.military.com/CoverLetters/">Cover Letters</a></li>
+  <li><a href="https://www.military.com/applicationHistory/">Jobs I've Applied To</a></li>
+  <li><a href="https://www.military.com/SavedJobs/">Saved Jobs</a></li>
+  <li><a href="https://www.military.com/SavedSearches/">Saved Searches</a></li>
+  <li><a href="https://www.military.com/profile/member-profile-newsletter-settings.html">Subscriptions</a></li>
+  <li><a href="https://www.military.com/member-reg/logout.html?vlv_redir=">Log out</a></li>
+</ul>
+      </li>
+      <li class="menu--account__anonymous--mobile menu--account__authenticated--mobile">
+        <a href="/">Home</a>
+      </li>
+                        <li>
+                  <a href="/daily-news" target="_self" rel="" data-drupal-link-system-path="node/1251">News</a>
+                                <ul>
+                    <li>
+                  <a href="/daily-news" target="_self" rel="" data-drupal-link-system-path="node/1251">News Home</a>
+                        </li>
+                <li>
+                  <a href="/army" data-drupal-link-system-path="node/3241">Army</a>
+                        </li>
+                <li>
+                  <a href="/navy" data-drupal-link-system-path="node/3271">Navy</a>
+                        </li>
+                <li>
+                  <a href="/air-force" target="_self" rel="" data-drupal-link-system-path="node/3231">Air Force</a>
+                        </li>
+                <li>
+                  <a href="/marine-corps" target="_self" rel="" data-drupal-link-system-path="node/3256">Marine Corps</a>
+                        </li>
+                <li>
+                  <a href="/coast-guard" target="_self" rel="" data-drupal-link-system-path="node/3251">Coast Guard</a>
+                        </li>
+                <li>
+                  <a href="/space-force" target="_self" rel="" data-drupal-link-system-path="node/221226">Space Force</a>
+                        </li>
+                <li>
+                  <a href="/podcasts" target="_self" data-drupal-link-system-path="node/308881">Military Podcasts</a>
+                        </li>
+                <li>
+                  <a href="/daily-news/opinion" target="_self" rel="" data-drupal-link-system-path="node/99241">Opinion</a>
+                        </li>
+                <li>
+                  <a href="https://www.military.com/video" target="_self" rel="">Videos</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/benefits" target="_self" rel="" data-drupal-link-system-path="node/206">Benefits</a>
+                                <ul>
+                    <li>
+                  <a href="/benefits" target="_self" rel="" data-drupal-link-system-path="node/206">Benefits Home</a>
+                        </li>
+                <li>
+                  <a href="/benefits/military-pay" target="_self" data-drupal-link-system-path="node/3671">Military Pay and Money</a>
+                        </li>
+                <li>
+                  <a href="/education/gi-bill" target="_self" rel="" data-drupal-link-system-path="node/1206">GI Bill</a>
+                        </li>
+                <li>
+                  <a href="/benefits/veterans-health-care" target="_self" rel="" data-drupal-link-system-path="node/3816">Veteran Health Care</a>
+                        </li>
+                <li>
+                  <a href="/benefits/tricare" target="_self" rel="" data-drupal-link-system-path="node/3736">Tricare</a>
+                        </li>
+                <li>
+                  <a href="/money/va-loans" target="_self" rel="" data-drupal-link-system-path="node/1941">VA Loans</a>
+                        </li>
+                <li>
+                  <a href="/money/insurance" target="_self" rel="" data-drupal-link-system-path="node/2466">Insurance</a>
+                        </li>
+                <li>
+                  <a href="/money/retirement" target="_self" rel="" data-drupal-link-system-path="node/2511">Retirement</a>
+                        </li>
+                <li>
+                  <a href="/benefits/veteran-benefits/the-ebenefits-program.html" target="_self" rel="" data-drupal-link-system-path="node/42065">VA eBenefits</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/veteran-jobs" target="_self" rel="" data-drupal-link-system-path="node/1746">Veteran Jobs</a>
+                                <ul>
+                    <li>
+                  <a href="/veteran-jobs" target="_self" data-drupal-link-system-path="node/1746">Veteran Job Search</a>
+                        </li>
+                <li>
+                  <a href="/veteran-jobs/skills-translator" target="_self" rel="" data-drupal-link-system-path="node/99441">Military Skills Translator</a>
+                        </li>
+                <li>
+                  <a href="https://www.military.com/resumes/" target="_self" rel="">Upload Your Resume</a>
+                        </li>
+                <li>
+                  <a href="/veteran-employment-project" target="_self" data-drupal-link-system-path="node/339886">Veteran Employment Project</a>
+                        </li>
+                <li>
+                  <a href="/veteran-employers" target="_self" rel="" data-drupal-link-system-path="node/1016">Vet Friendly Employers</a>
+                        </li>
+                <li>
+                  <a href="/veteran-jobs/career-advice" target="_self" rel="" data-drupal-link-system-path="node/2201">Career Advice</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/military-life" target="_self" rel="" data-drupal-link-system-path="node/1791">Military Life</a>
+                                <ul>
+                    <li>
+                  <a href="/military-life" target="_self" rel="" data-drupal-link-system-path="node/1791">Military Life Home</a>
+                        </li>
+                <li>
+                  <a href="/money" target="_self" rel="" data-drupal-link-system-path="node/2401">Money</a>
+                        </li>
+                <li>
+                  <a href="/off-duty" target="_self" rel="" data-drupal-link-system-path="node/2241">Off Duty</a>
+                        </li>
+                <li>
+                  <a href="/military-fitness" target="_self" rel="" data-drupal-link-system-path="node/1991">Fitness</a>
+                        </li>
+                <li>
+                  <a href="/trivia" target="_self" rel="" data-drupal-link-system-path="node/4251">Military Trivia Game</a>
+                        </li>
+                <li>
+                  <a href="/veterans-day" target="_self" rel="" data-drupal-link-system-path="node/5206">Veterans Day</a>
+                        </li>
+                <li>
+                  <a href="/spouse" target="_self" rel="" data-drupal-link-system-path="node/3621">Spouse &amp; Family</a>
+                        </li>
+                <li>
+                  <a href="/deployment" target="_self" rel="" data-drupal-link-system-path="node/4226">Deployment</a>
+                        </li>
+                <li>
+                  <a href="/history" data-drupal-link-system-path="node/4231">Military History</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/discounts" target="" rel="" data-drupal-link-system-path="node/1086">Discounts</a>
+                                <ul>
+                    <li>
+                  <a href="/discounts" target="" rel="" data-drupal-link-system-path="node/1086">Discounts Home</a>
+                        </li>
+                <li>
+                  <a href="/discounts/hot-deals" target="_self" data-drupal-link-system-path="taxonomy/term/1551">Featured Discounts</a>
+                        </li>
+                <li>
+                  <a href="/veterans-day/restaurants-veterans-day-military-discounts.html" target="_self" rel="" data-drupal-link-system-path="node/49210">Veterans Day Restaurant Discounts</a>
+                        </li>
+                <li>
+                  <a href="/discounts/dining" data-drupal-link-system-path="taxonomy/term/1486">Dining</a>
+                        </li>
+                <li>
+                  <a href="/discounts/travel" target="_self" rel="" data-drupal-link-system-path="taxonomy/term/1626">Travel</a>
+                        </li>
+                <li>
+                  <a href="/discounts/apparel-and-accessories" target="_self" data-drupal-link-system-path="taxonomy/term/1411">Retail</a>
+                        </li>
+                <li>
+                  <a href="/money/insurance" data-drupal-link-system-path="node/2466">Insurance</a>
+                        </li>
+                <li>
+                  <a href="/discounts/professional-services" data-drupal-link-system-path="taxonomy/term/1586">Services</a>
+                        </li>
+                <li>
+                  <a href="/discounts/auto" data-drupal-link-system-path="taxonomy/term/1471">Auto</a>
+                        </li>
+                <li>
+                  <a href="/discounts/electronics" data-drupal-link-system-path="taxonomy/term/1496">Electronics</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/join-armed-forces" data-drupal-link-system-path="node/2291">Join the Military</a>
+                                <ul>
+                    <li>
+                  <a href="/join-armed-forces" data-drupal-link-system-path="node/2291">Join the Military Home</a>
+                        </li>
+                <li>
+                  <a href="/join-armed-forces/asvab" data-drupal-link-system-path="node/2301">ASVAB</a>
+                        </li>
+                <li>
+                  <a href="https://www.military.com/find-info/contact-recruiter?ESRC=mil_cta.os">Contact a Recruiter</a>
+                        </li>
+                <li>
+                  <a href="/military-fitness" data-drupal-link-system-path="node/1991">Military Fitness</a>
+                        </li>
+                <li>
+                  <a href="/benefits" data-drupal-link-system-path="node/206">Benefits</a>
+                        </li>
+        </ul>
+    
+                        </li>
+              <li class="menu--account__anonymous--mobile menu--account__authenticated--mobile">
+        <a href="https://militarycom.freshdesk.com/support/tickets/new" target="_blank">Help & Feedback</a>
+      </li>
+    </ul>
+    
+
+
+        </nav>
+  
+
+      
+
+
+
+<a href=/ class="button button--icon button--icon--search" aria-label="search" data-target="">
+  
+<i class="icon icon-search"></i>
+</a>
+
+        <div class="block--search--mobile">
+      <div>
+        
+
+
+
+<a href=/ class="button button--icon button--icon--close" aria-label="close" data-target="">
+  
+<i class="icon icon-close"></i>
+</a>
+
+        <form name="gs" method="GET" action="//www.military.com/search">
+
+          <div class="search-wrapper">
+            <input type="search" name="keyword" value="" class="searchInput" placeholder="Search Military.com" aria-label="Search Military.com">
+          </div>
+
+          <button class="button">Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+          
+
+
+
+      <div class="block block--system-branding-block">
+    
+    
+
+        <a href="/" title="Home" rel="home">
+            <img src="//images.military.com/themes/military/logo.svg" class="logo" alt="Military.com Logo" onerror="this.onerror=null; this.src='/themes/military/logo.png'"/>
+    </a>
+      
+      </div>
+  
+
+
+
+      <nav class="block block--system-menu-block-main">
+    
+    
+
+      
+
+
+
+
+        <ul class="menu menu--main">
+              <li class="menu--account__anonymous--mobile">
+        <a href="http://www.military.com/member-reg/login.html?vlv_redir=http%3A%2F%2Fwww.military.com%2F">Login</a>
+      </li>
+      <li class="menu--account__authenticated--mobile">
+        <a href="http://www.military.com/profile/member-profile.html">Profile</a>
+        <ul>
+  <li><a href="https://www.military.com/profile/member-profile.html">Profile</a></li>
+  <li><a href="https://www.military.com/resumes/">Resumes</a></li>
+  <li><a href="https://www.military.com/CoverLetters/">Cover Letters</a></li>
+  <li><a href="https://www.military.com/applicationHistory/">Jobs I've Applied To</a></li>
+  <li><a href="https://www.military.com/SavedJobs/">Saved Jobs</a></li>
+  <li><a href="https://www.military.com/SavedSearches/">Saved Searches</a></li>
+  <li><a href="https://www.military.com/profile/member-profile-newsletter-settings.html">Subscriptions</a></li>
+  <li><a href="https://www.military.com/member-reg/logout.html?vlv_redir=">Log out</a></li>
+</ul>
+      </li>
+      <li class="menu--account__anonymous--mobile menu--account__authenticated--mobile">
+        <a href="/">Home</a>
+      </li>
+                        <li>
+                  <a href="/daily-news" target="_self" rel="" data-drupal-link-system-path="node/1251">News</a>
+                                <ul>
+                    <li>
+                  <a href="/daily-news" target="_self" rel="" data-drupal-link-system-path="node/1251">News Home</a>
+                        </li>
+                <li>
+                  <a href="/army" data-drupal-link-system-path="node/3241">Army</a>
+                        </li>
+                <li>
+                  <a href="/navy" data-drupal-link-system-path="node/3271">Navy</a>
+                        </li>
+                <li>
+                  <a href="/air-force" target="_self" rel="" data-drupal-link-system-path="node/3231">Air Force</a>
+                        </li>
+                <li>
+                  <a href="/marine-corps" target="_self" rel="" data-drupal-link-system-path="node/3256">Marine Corps</a>
+                        </li>
+                <li>
+                  <a href="/coast-guard" target="_self" rel="" data-drupal-link-system-path="node/3251">Coast Guard</a>
+                        </li>
+                <li>
+                  <a href="/space-force" target="_self" rel="" data-drupal-link-system-path="node/221226">Space Force</a>
+                        </li>
+                <li>
+                  <a href="/podcasts" target="_self" data-drupal-link-system-path="node/308881">Military Podcasts</a>
+                        </li>
+                <li>
+                  <a href="/daily-news/opinion" target="_self" rel="" data-drupal-link-system-path="node/99241">Opinion</a>
+                        </li>
+                <li>
+                  <a href="https://www.military.com/video" target="_self" rel="">Videos</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/benefits" target="_self" rel="" data-drupal-link-system-path="node/206">Benefits</a>
+                                <ul>
+                    <li>
+                  <a href="/benefits" target="_self" rel="" data-drupal-link-system-path="node/206">Benefits Home</a>
+                        </li>
+                <li>
+                  <a href="/benefits/military-pay" target="_self" data-drupal-link-system-path="node/3671">Military Pay and Money</a>
+                        </li>
+                <li>
+                  <a href="/education/gi-bill" target="_self" rel="" data-drupal-link-system-path="node/1206">GI Bill</a>
+                        </li>
+                <li>
+                  <a href="/benefits/veterans-health-care" target="_self" rel="" data-drupal-link-system-path="node/3816">Veteran Health Care</a>
+                        </li>
+                <li>
+                  <a href="/benefits/tricare" target="_self" rel="" data-drupal-link-system-path="node/3736">Tricare</a>
+                        </li>
+                <li>
+                  <a href="/money/va-loans" target="_self" rel="" data-drupal-link-system-path="node/1941">VA Loans</a>
+                        </li>
+                <li>
+                  <a href="/money/insurance" target="_self" rel="" data-drupal-link-system-path="node/2466">Insurance</a>
+                        </li>
+                <li>
+                  <a href="/money/retirement" target="_self" rel="" data-drupal-link-system-path="node/2511">Retirement</a>
+                        </li>
+                <li>
+                  <a href="/benefits/veteran-benefits/the-ebenefits-program.html" target="_self" rel="" data-drupal-link-system-path="node/42065">VA eBenefits</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/veteran-jobs" target="_self" rel="" data-drupal-link-system-path="node/1746">Veteran Jobs</a>
+                                <ul>
+                    <li>
+                  <a href="/veteran-jobs" target="_self" data-drupal-link-system-path="node/1746">Veteran Job Search</a>
+                        </li>
+                <li>
+                  <a href="/veteran-jobs/skills-translator" target="_self" rel="" data-drupal-link-system-path="node/99441">Military Skills Translator</a>
+                        </li>
+                <li>
+                  <a href="https://www.military.com/resumes/" target="_self" rel="">Upload Your Resume</a>
+                        </li>
+                <li>
+                  <a href="/veteran-employment-project" target="_self" data-drupal-link-system-path="node/339886">Veteran Employment Project</a>
+                        </li>
+                <li>
+                  <a href="/veteran-employers" target="_self" rel="" data-drupal-link-system-path="node/1016">Vet Friendly Employers</a>
+                        </li>
+                <li>
+                  <a href="/veteran-jobs/career-advice" target="_self" rel="" data-drupal-link-system-path="node/2201">Career Advice</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/military-life" target="_self" rel="" data-drupal-link-system-path="node/1791">Military Life</a>
+                                <ul>
+                    <li>
+                  <a href="/military-life" target="_self" rel="" data-drupal-link-system-path="node/1791">Military Life Home</a>
+                        </li>
+                <li>
+                  <a href="/money" target="_self" rel="" data-drupal-link-system-path="node/2401">Money</a>
+                        </li>
+                <li>
+                  <a href="/off-duty" target="_self" rel="" data-drupal-link-system-path="node/2241">Off Duty</a>
+                        </li>
+                <li>
+                  <a href="/military-fitness" target="_self" rel="" data-drupal-link-system-path="node/1991">Fitness</a>
+                        </li>
+                <li>
+                  <a href="/trivia" target="_self" rel="" data-drupal-link-system-path="node/4251">Military Trivia Game</a>
+                        </li>
+                <li>
+                  <a href="/veterans-day" target="_self" rel="" data-drupal-link-system-path="node/5206">Veterans Day</a>
+                        </li>
+                <li>
+                  <a href="/spouse" target="_self" rel="" data-drupal-link-system-path="node/3621">Spouse &amp; Family</a>
+                        </li>
+                <li>
+                  <a href="/deployment" target="_self" rel="" data-drupal-link-system-path="node/4226">Deployment</a>
+                        </li>
+                <li>
+                  <a href="/history" data-drupal-link-system-path="node/4231">Military History</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/discounts" target="" rel="" data-drupal-link-system-path="node/1086">Discounts</a>
+                                <ul>
+                    <li>
+                  <a href="/discounts" target="" rel="" data-drupal-link-system-path="node/1086">Discounts Home</a>
+                        </li>
+                <li>
+                  <a href="/discounts/hot-deals" target="_self" data-drupal-link-system-path="taxonomy/term/1551">Featured Discounts</a>
+                        </li>
+                <li>
+                  <a href="/veterans-day/restaurants-veterans-day-military-discounts.html" target="_self" rel="" data-drupal-link-system-path="node/49210">Veterans Day Restaurant Discounts</a>
+                        </li>
+                <li>
+                  <a href="/discounts/dining" data-drupal-link-system-path="taxonomy/term/1486">Dining</a>
+                        </li>
+                <li>
+                  <a href="/discounts/travel" target="_self" rel="" data-drupal-link-system-path="taxonomy/term/1626">Travel</a>
+                        </li>
+                <li>
+                  <a href="/discounts/apparel-and-accessories" target="_self" data-drupal-link-system-path="taxonomy/term/1411">Retail</a>
+                        </li>
+                <li>
+                  <a href="/money/insurance" data-drupal-link-system-path="node/2466">Insurance</a>
+                        </li>
+                <li>
+                  <a href="/discounts/professional-services" data-drupal-link-system-path="taxonomy/term/1586">Services</a>
+                        </li>
+                <li>
+                  <a href="/discounts/auto" data-drupal-link-system-path="taxonomy/term/1471">Auto</a>
+                        </li>
+                <li>
+                  <a href="/discounts/electronics" data-drupal-link-system-path="taxonomy/term/1496">Electronics</a>
+                        </li>
+        </ul>
+    
+                        </li>
+                <li>
+                  <a href="/join-armed-forces" data-drupal-link-system-path="node/2291">Join the Military</a>
+                                <ul>
+                    <li>
+                  <a href="/join-armed-forces" data-drupal-link-system-path="node/2291">Join the Military Home</a>
+                        </li>
+                <li>
+                  <a href="/join-armed-forces/asvab" data-drupal-link-system-path="node/2301">ASVAB</a>
+                        </li>
+                <li>
+                  <a href="https://www.military.com/find-info/contact-recruiter?ESRC=mil_cta.os">Contact a Recruiter</a>
+                        </li>
+                <li>
+                  <a href="/military-fitness" data-drupal-link-system-path="node/1991">Military Fitness</a>
+                        </li>
+                <li>
+                  <a href="/benefits" data-drupal-link-system-path="node/206">Benefits</a>
+                        </li>
+        </ul>
+    
+                        </li>
+              <li class="menu--account__anonymous--mobile menu--account__authenticated--mobile">
+        <a href="https://militarycom.freshdesk.com/support/tickets/new" target="_blank">Help & Feedback</a>
+      </li>
+    </ul>
+    
+
+
+        </nav>
+  
+
+
+
+
+
+
+      <div class="block block--global-search-toggle">
+    
+    
+
+      
+
+
+
+<a href=# class="button button--icon button--icon--search" aria-label="search" data-target="">
+  
+<i class="icon icon-search"></i>
+</a>
+    
+        </div>
+  
+  
+
+
+
+      <div class="block block--user--nav">
+    
+    
+
+      
+
+<nav class="menu menu--account menu--account__anonymous" id="login_btn">
+  <a id="user-menu-login-link" href="https://www.military.com/member-reg/login.html?vlv_redir=https://www.military.com/benefits/military-pay/2013-pay-charts.html">Login</a>
+</nav>
+
+<nav class="menu menu--account menu--account__authenticated" id="profile_btn">
+  
+
+
+
+<a href=# class="button button--icon button--icon--user" aria-label="user" data-target="">
+  
+<i class="icon icon-user"></i>
+</a>
+  <div class="menu--account__dropdown">
+    <div class="info">
+      <div class="name"></div>
+      <small class="email"></small>
+    </div>
+    <ul>
+  <li><a href="https://www.military.com/profile/member-profile.html">Profile</a></li>
+  <li><a href="https://www.military.com/resumes/">Resumes</a></li>
+  <li><a href="https://www.military.com/CoverLetters/">Cover Letters</a></li>
+  <li><a href="https://www.military.com/applicationHistory/">Jobs I've Applied To</a></li>
+  <li><a href="https://www.military.com/SavedJobs/">Saved Jobs</a></li>
+  <li><a href="https://www.military.com/SavedSearches/">Saved Searches</a></li>
+  <li><a href="https://www.military.com/profile/member-profile-newsletter-settings.html">Subscriptions</a></li>
+  <li><a href="https://www.military.com/member-reg/logout.html?vlv_redir=https://www.military.com/benefits/military-pay/2013-pay-charts.html">Log out</a></li>
+</ul>
+  </div>
+</nav>
+<script>
+    if(document.cookie.indexOf('LoginInfo')>=0){
+
+        document.getElementById('profile_btn').style.display="block";
+    }
+    else{
+        document.getElementById('login_btn').style.display="block";
+
+    }
+</script>
+
+        </div>
+  
+
+
+
+
+      <div class="block block--global-search-box">
+    
+    
+
+                      
+
+
+
+<button class="button button--icon button--icon--close" aria-label="close" data-target="">
+  
+<i class="icon icon-close"></i>
+</button>
+    
+
+
+
+<form class="global-search-form form--global-search-form" data-drupal-selector="global-search-form" action="/search" method="get" id="global-search-form" accept-charset="UTF-8">
+      <div class="form__item form__item--keyword form--no-label js-form-item js-form-type-search js-form-item-keyword">
+        
+  
+<input data-drupal-selector="edit-keyword" type="search" id="edit-keyword" name="keyword" value="" size="60" maxlength="128" placeholder="Search Military.com" class="form-search required" required="required" aria-required="true" aria-label="Search Military.com"/>
+
+        </div>
+
+
+<div data-drupal-selector="edit-actions" class="form-actions form__actions form__wrapper js-form-wrapper" id="edit-actions">
+
+
+
+
+<button class="button button--icon button--icon--search" aria-label="search" data-target="">
+  
+<i class="icon icon-search"></i>
+</button>
+</div>
+
+  </form>
+
+        </div>
+  
+
+          </div>
+  </header>
+    
+  <section class="page__top">
+    <div class="page__promo-wrapper container">
+              <div class="page__promo page__promo--left" data-position="left">
+            
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-5ef12a76b3c33-BrandscapeLeft"></div>
+        </div>
+  
+
+
+        </div>
+      
+              <div class="page__promo page__promo--right" data-position="right">
+            
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-5ef12a90ee46b-BrandscapeRight"></div>
+        </div>
+  
+
+
+        </div>
+          </div>
+
+      
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-5ef126022a816-Top"></div>
+        </div>
+  
+
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-5ef126226826a-MobileTop"></div>
+        </div>
+  
+
+
+    
+  </section>
+
+  <main class="content">
+    <div class="content__wrapper container">
+        <div data-drupal-messages-fallback class="hidden"></div>
+
+
+
+                        <div class="row">
+            <div id="bodyContent" class="page__content col-md-8">
+                
+    
+  
+
+
+
+      <div class="block block--breadcrumb">
+    
+    
+
+        
+
+<nav class="breadcrumb">
+  <ol>
+    <li><a href="/" aria-label="Home"><i class="icon icon-home3"></i></a></li>
+          <li>
+                  <a href="/benefits">Benefits</a>
+              </li>
+          <li>
+                  <a href="/benefits/military-pay">Military Pay</a>
+              </li>
+      </ol>
+</nav>
+
+        </div>
+  
+
+
+
+
+      <div class="block block--page--title">
+    
+    
+
+      
+  <h1><span property="schema:name">2013 Military Pay Charts</span>
+</h1>
+
+
+      </div>
+  
+  
+
+
+
+      <div class="block block--addtoanyadv">
+    
+    
+
+      <span class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.military.com/benefits/military-pay/2013-pay-charts.html" data-a2a-title="2013 Military Pay Charts"><div class="a2a_kit a2a_kit_size_32 a2a_default_style" id="addtoany_buttons"><a class="a2a_button_facebook"><img  src="/themes/military/assets/images/icons/social-icons_facebook.svg" border="0"  alt="Facebook" width="27" height="27"></a><a class="a2a_button_twitter"><img  src="/themes/military/assets/images/icons/social-icons_twitter.svg" border="0"  alt="Twitter" width="27" height="27"></a><a class="a2a_button_pinterest"><img  src="/themes/military/assets/images/icons/social-icons_pinterest.svg" border="0"  alt="Pinterest" width="27" height="27"></a><a class="a2a_button_email"><img  src="/themes/military/assets/images/icons/social-icons_email.svg" border="0" alt="Email" width="27" height="27"></a><a class="a2a_dd" href="https://www.addtoany.com/share"><img  src="/themes/military/assets/images/icons/social-icons_more.svg" border="0" alt="Share" width="27" height="27"></a></div></span>
+        </div>
+  
+
+
+
+
+
+<article role="article" about="/benefits/military-pay/2013-pay-charts.html" typeof="schema:Article" class="node node--article node--article--full">
+  
+    <span property="schema:name" content="2013 Military Pay Charts" class="hidden"></span>
+
+
+  
+      
+  
+    
+  
+  
+  
+
+<div class="byline">
+        <div class="source">
+          <span>Military.com</span>
+    
+    
+        </div>
+  </div>
+
+  
+
+  
+
+
+  <div class="article__body">
+    <div class="remixd-player" id="remixd-audio-player-script"></div>
+    
+
+
+
+
+
+
+                            <p>The National Defense Authorization Act of 2013 includes a 1.7 percent across-the-board base pay raise  for 2013. This raise is .1% percent more than the 2012 military pay increase and remains among the smallest increases since 1962.</p>
+<p>The following tables reflect the 2013 monthly pay based on the 1.7 percent pay raise, which went into effect Jan. 1, 2013.</p><div id="content-adblock-63231f920bb11"></div><div id="content-adblock-63231f920bb15"></div>
+<ul><li><a href="#opay">2013 Commissioned Officer Pay Chart</a></li>
+<li><a href="#wpay">2013 Warrant Officer Pay Chart </a></li>
+<li><a href="#epay">2013 Enlisted Pay Chart</a></li>
+<li><a href="/benefits/military-pay/2013-drill-pay-charts.html">2013 Guard and Reserve Drill Pay Charts</a></li></ul><p>
+	</p><table><tbody><tr><td><strong><a></a>2013 Military Commissioned Officer Pay Chart</strong></td>
+        </tr></tbody><tr><td><strong> </strong></td>
+	    <td><strong>&lt; 2</strong></td>
+	    <td><strong>Over 2</strong></td>
+	    <td><strong>Over 3</strong></td>
+	    <td><strong>Over 4</strong></td>
+	    <td><strong>Over 6</strong></td>
+	    <td><strong>Over 8</strong></td>
+	    <td><strong>Over 10</strong></td>
+	    <td><strong>Over 12</strong></td>
+	    <td><strong>Over 14</strong></td>
+      </tr><tr><td><strong>O10</strong></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr><tr><td><strong>O-9</strong></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr><tr><td><strong>O-8</strong></td>
+        <td>$9,848</td>
+        <td>$10,170</td>
+        <td>$10,384</td>
+        <td>$10,444</td>
+        <td>$10,711</td>
+        <td>$11,157</td>
+        <td>$11,262</td>
+        <td>$11,685</td>
+        <td>$11,807</td>
+      </tr><tr><td><strong>O-7</strong></td>
+        <td>$8,183</td>
+        <td>$8,563</td>
+        <td>$8,739</td>
+        <td>$8,878</td>
+        <td>$9,132</td>
+        <td>$9,382</td>
+        <td>$9,671</td>
+        <td>$9,959</td>
+        <td>$10,249</td>
+      </tr><tr><td><strong>O-6</strong></td>
+        <td>$6,065</td>
+        <td>$6,663</td>
+        <td>$7,100</td>
+        <td>$7,100</td>
+        <td>$7,127</td>
+        <td>$7,433</td>
+        <td>$7,473</td>
+        <td>$7,473</td>
+        <td>$7,898</td>
+      </tr><tr><td><strong>O-5</strong></td>
+        <td>$5,056</td>
+        <td>$5,696</td>
+        <td>$6,090</td>
+        <td>$6,164</td>
+        <td>$6,410</td>
+        <td>$6,557</td>
+        <td>$6,881</td>
+        <td>$7,118</td>
+        <td>$7,425</td>
+      </tr><tr><td><strong>O-4</strong></td>
+        <td>$4,362</td>
+        <td>$5,050</td>
+        <td>$5,387</td>
+        <td>$5,462</td>
+        <td>$5,775</td>
+        <td>$6,110</td>
+        <td>$6,528</td>
+        <td>$6,853</td>
+        <td>$7,079</td>
+      </tr><tr><td><strong>O-3</strong></td>
+        <td>$3,835</td>
+        <td>$4,348</td>
+        <td>$4,693</td>
+        <td>$5,117</td>
+        <td>$5,361</td>
+        <td>$5,631</td>
+        <td>$5,805</td>
+        <td>$6,091</td>
+        <td>$6,240</td>
+      </tr><tr><td><strong>O-2</strong></td>
+        <td>$3,314</td>
+        <td>$3,774</td>
+        <td>$4,347</td>
+        <td>$4,494</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+      </tr><tr><td><strong>O-1</strong></td>
+        <td>$2,877</td>
+        <td>$2,994</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+      </tr><tr><td><strong>*</strong>Basic pay for an O-7 to O-10 is limited by Level II of the Executive Schedule which is $14,975.10. Basic pay for O-6 and below is limited by Level V of the Executive Schedule which is $12,141.60.
+          **
+        While serving as Chairman, Joint Chief of Staff/Vice Chairman, Joint Chief of Staff, Chief of Navy Operations, Commandant of the Marine Corps, Army/Air Force Chief of Staff, Commander of a unified or specified combatant command, basic pay is $20,263.50. (See note 1 above).</td>
+      </tr><tr><td><strong> </strong></td>
+        <td><strong>Over 16</strong></td>
+        <td><strong>Over 18</strong></td>
+        <td><strong>Over 20</strong></td>
+        <td><strong>Over 22</strong></td>
+        <td><strong>Over 24</strong></td>
+        <td><strong>Over 26</strong></td>
+        <td><strong>Over 30</strong></td>
+        <td><strong>Over 34</strong></td>
+        <td><strong>Over 38</strong></td>
+      </tr><tr><td><strong>O10</strong></td>
+        <td> </td>
+        <td> </td>
+        <td>$15,913</td>
+        <td>$15,991</td>
+        <td>$16,323</td>
+        <td>$16,903</td>
+        <td>$17,748</td>
+        <td>$18,635</td>
+        <td>$19,567</td>
+      </tr><tr><td><strong>O-9</strong></td>
+        <td> </td>
+        <td> </td>
+        <td>$13,918</td>
+        <td>$14,118</td>
+        <td>$14,408</td>
+        <td>$14,913</td>
+        <td>$15,659</td>
+        <td>$16,442</td>
+        <td>$17,264</td>
+      </tr><tr><td><strong>O-8</strong></td>
+        <td>$12,172</td>
+        <td>$12,700</td>
+        <td>$13,187</td>
+        <td>$13,512</td>
+        <td>$13,512</td>
+        <td>$13,512</td>
+        <td>$13,850</td>
+        <td>$14,197</td>
+        <td>$14,197</td>
+      </tr><tr><td><strong>O-7</strong></td>
+        <td>$11,157</td>
+        <td>$11,925</td>
+        <td>$11,925</td>
+        <td>$11,925</td>
+        <td>$11,925</td>
+        <td>$11,985</td>
+        <td>$12,225</td>
+        <td>$12,225</td>
+        <td>$12,225</td>
+      </tr><tr><td><strong>O-6</strong></td>
+        <td>$8,649</td>
+        <td>$9,090</td>
+        <td>$9,530</td>
+        <td>$9,781</td>
+        <td>$10,034</td>
+        <td>$10,527</td>
+        <td>$10,737</td>
+        <td>$10,737</td>
+        <td>$10,737</td>
+      </tr><tr><td><strong>O-5</strong></td>
+        <td>$7,895</td>
+        <td>$8,118</td>
+        <td>$8,339</td>
+        <td>$8,590</td>
+        <td>$8,590</td>
+        <td>$8,590</td>
+        <td>$8,590</td>
+        <td>$8,590</td>
+        <td>$8,590</td>
+      </tr><tr><td><strong>O-4</strong></td>
+        <td>$7,209</td>
+        <td>$7,284</td>
+        <td>$7,284</td>
+        <td>$7,284</td>
+        <td>$7,284</td>
+        <td>$7,284</td>
+        <td>$7,284</td>
+        <td>$7,284</td>
+        <td>$7,284</td>
+      </tr><tr><td><strong>O-3</strong></td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+        <td>$6,240</td>
+      </tr><tr><td><strong>O-2</strong></td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+        <td>$4,586</td>
+      </tr><tr><td><strong>O-1</strong></td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+        <td>$3,619</td>
+      </tr></table><p></p>
+	<table><tbody><tr><td><strong>2013 Military Officers (with prior enlisted experience)+</strong></td>
+        </tr><tr><td> </td>
+          <td><strong>&lt; 2</strong></td>
+          <td><strong>Over 2</strong></td>
+          <td><strong>Over 3</strong></td>
+          <td><strong>Over 4</strong></td>
+          <td><strong>Over 6</strong></td>
+          <td><strong>Over 8</strong></td>
+          <td><strong>Over 10</strong></td>
+          <td><strong>Over 12</strong></td>
+          <td><strong>Over 14</strong></td>
+        </tr><tr><td><strong>03E</strong></td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>$5,117</td>
+          <td>$5,361</td>
+          <td>$5,631</td>
+          <td>$5,805</td>
+          <td>$6,091</td>
+          <td>$6,332</td>
+        </tr><tr><td><strong>O2E</strong></td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>$4,494</td>
+          <td>$4,586</td>
+          <td>$4,732</td>
+          <td>$4,979</td>
+          <td>$5,169</td>
+          <td>$5,311</td>
+        </tr><tr><td><strong>O1E</strong></td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>$3,619</td>
+          <td>$3,865</td>
+          <td>$4,008</td>
+          <td>$4,154</td>
+          <td>$4,297</td>
+          <td>$4,494</td>
+        </tr><tr><td>+Applicable to O-1 to O-3 with at least 4 years and 1 day of active duty or more than 1460 points as a warrant and/or enlisted member. See Department of Defense Financial Management Regulations for more detailed explanation on who is eligible for this special basic pay rate.</td>
+        </tr><tr><td><strong> </strong></td>
+          <td><strong>Over 16</strong></td>
+          <td><strong>Over 18</strong></td>
+          <td><strong>Over 20</strong></td>
+          <td><strong>Over 22</strong></td>
+          <td><strong>Over 24</strong></td>
+          <td><strong>Over 26</strong></td>
+          <td><strong>Over 30</strong></td>
+          <td><strong>Over 34</strong></td>
+          <td><strong>Over 38</strong></td>
+        </tr><tr><td><strong>03E</strong></td>
+          <td>$6,471</td>
+          <td>$6,659</td>
+          <td>$6,659</td>
+          <td>$6,659</td>
+          <td>$6,659</td>
+          <td>$6,659</td>
+          <td>$6,659</td>
+          <td>$6,659</td>
+          <td>$6,659</td>
+        </tr><tr><td><strong>O2E</strong></td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+          <td>$5,311</td>
+        </tr><tr><td><strong>O1E</strong></td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+          <td>$4,494</td>
+        </tr></tbody></table><p></p><div id="content-adblock-63231f920c404"></div><div id="content-adblock-63231f920c407"></div>
+	<table><tbody><tr><td><strong><a></a>2013 Warrant Officer Pay Chart</strong></td>
+        </tr><tr><td> </td>
+          <td><strong>&lt; 2</strong></td>
+          <td><strong>Over 2</strong></td>
+          <td><strong>Over 3</strong></td>
+          <td><strong>Over 4</strong></td>
+          <td><strong>Over 6</strong></td>
+          <td><strong>Over 8</strong></td>
+          <td><strong>Over 10</strong></td>
+          <td><strong>Over 12</strong></td>
+          <td><strong>Over 14</strong></td>
+        </tr><tr><td><strong>W-5</strong></td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr><tr><td><strong>W-4</strong></td>
+          <td>$3,964</td>
+          <td>$4,264</td>
+          <td>$4,386</td>
+          <td>$4,507</td>
+          <td>$4,714</td>
+          <td>$4,919</td>
+          <td>$5,126</td>
+          <td>$5,440</td>
+          <td>$5,714</td>
+        </tr><tr><td><strong>W-3</strong></td>
+          <td>$3,619</td>
+          <td>$3,770</td>
+          <td>$3,925</td>
+          <td>$3,976</td>
+          <td>$4,138</td>
+          <td>$4,457</td>
+          <td>$4,789</td>
+          <td>$4,945</td>
+          <td>$5,126</td>
+        </tr><tr><td><strong>W-2</strong></td>
+          <td>$3,203</td>
+          <td>$3,506</td>
+          <td>$3,599</td>
+          <td>$3,663</td>
+          <td>$3,871</td>
+          <td>$4,194</td>
+          <td>$4,354</td>
+          <td>$4,511</td>
+          <td>$4,704</td>
+        </tr><tr><td><strong>W-1</strong></td>
+          <td>$2,812</td>
+          <td>$3,114</td>
+          <td>$3,195</td>
+          <td>$3,367</td>
+          <td>$3,571</td>
+          <td>$3,870</td>
+          <td>$4,011</td>
+          <td>$4,206</td>
+          <td>$4,398</td>
+        </tr><tr><td><strong> </strong></td>
+        </tr><tr><td><strong> </strong></td>
+          <td><strong>Over 16</strong></td>
+          <td><strong>Over 18</strong></td>
+          <td><strong>Over 20</strong></td>
+          <td><strong>Over 22</strong></td>
+          <td><strong>Over 24</strong></td>
+          <td><strong>Over 26</strong></td>
+          <td><strong>Over 30</strong></td>
+          <td><strong>Over 34</strong></td>
+          <td><strong>Over 38</strong></td>
+        </tr><tr><td><strong>W-5</strong></td>
+          <td> </td>
+          <td> </td>
+          <td>$7,048</td>
+          <td>$7,405</td>
+          <td>$7,672</td>
+          <td>$7,967</td>
+          <td>$8,365</td>
+          <td>$8,783</td>
+          <td>$9,223</td>
+        </tr><tr><td><strong>W-4</strong></td>
+          <td>$5,974</td>
+          <td>$6,188</td>
+          <td>$6,396</td>
+          <td>$6,701</td>
+          <td>$6,952</td>
+          <td>$7,239</td>
+          <td>$7,383</td>
+          <td>$7,383</td>
+          <td>$7,383</td>
+        </tr><tr><td><strong>W-3</strong></td>
+          <td>$5,313</td>
+          <td>$5,648</td>
+          <td>$5,874</td>
+          <td>$6,010</td>
+          <td>$6,154</td>
+          <td>$6,349</td>
+          <td>$6,349</td>
+          <td>$6,349</td>
+          <td>$6,349</td>
+        </tr><tr><td><strong>W-2</strong></td>
+          <td>$4,854</td>
+          <td>$4,991</td>
+          <td>$5,154</td>
+          <td>$5,261</td>
+          <td>$5,346</td>
+          <td>$5,346</td>
+          <td>$5,346</td>
+          <td>$5,346</td>
+          <td>$5,346</td>
+        </tr><tr><td><strong>W-1</strong></td>
+          <td>$4,550</td>
+          <td>$4,689</td>
+          <td>$4,858</td>
+          <td>$4,858</td>
+          <td>$4,858</td>
+          <td>$4,858</td>
+          <td>$4,858</td>
+          <td>$4,858</td>
+          <td>$4,858</td>
+        </tr></tbody></table><p></p>
+	<table><tbody><tr><td><strong><a></a>2013 Enlisted Pay Chart</strong></td>
+        </tr><tr><td><strong> </strong></td>
+          <td><strong>&lt; 2</strong></td>
+          <td><strong>Over 2</strong></td>
+          <td><strong>Over 3</strong></td>
+          <td><strong>Over 4</strong></td>
+          <td><strong>Over 6</strong></td>
+          <td><strong>Over 8</strong></td>
+          <td><strong>Over 10</strong></td>
+          <td><strong>Over 12</strong></td>
+          <td><strong>Over 14</strong></td>
+        </tr><tr><td><strong>E-9</strong></td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>$4,789</td>
+          <td>$4,897</td>
+          <td>$5,034</td>
+        </tr><tr><td><strong>E-8</strong></td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td>$3,920</td>
+          <td>$4,094</td>
+          <td>$4,201</td>
+          <td>$4,330</td>
+        </tr><tr><td><strong>E-7</strong></td>
+          <td>$2,725</td>
+          <td>$2,974</td>
+          <td>$3,088</td>
+          <td>$3,239</td>
+          <td>$3,357</td>
+          <td>$3,559</td>
+          <td>$3,673</td>
+          <td>$3,876</td>
+          <td>$4,044</td>
+        </tr><tr><td><strong>E-6</strong></td>
+          <td>$2,357</td>
+          <td>$2,594</td>
+          <td>$2,708</td>
+          <td>$2,819</td>
+          <td>$2,935</td>
+          <td>$3,197</td>
+          <td>$3,299</td>
+          <td>$3,495</td>
+          <td>$3,555</td>
+        </tr><tr><td><strong>E-5</strong></td>
+          <td>$2,160</td>
+          <td>$2,304</td>
+          <td>$2,416</td>
+          <td>$2,530</td>
+          <td>$2,707</td>
+          <td>$2,894</td>
+          <td>$3,046</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+        </tr><tr><td><strong>E-4</strong></td>
+          <td>$1,980</td>
+          <td>$2,081</td>
+          <td>$2,194</td>
+          <td>$2,305</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+        </tr><tr><td><strong>E-3</strong></td>
+          <td>$1,787</td>
+          <td>$1,900</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+        </tr><tr><td><strong>E-2</strong></td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+        </tr><tr><td><strong>E-1</strong></td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+        </tr><tr><td>*E-1    With less than 4 Months = $1,403</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr><tr><td>For the Master Chief Petty Officer of the Navy or Coast Guard, Chief Master Sergeant of the AF, Sergeant Major of the Army or Marine Corps or Senior Enlisted Advisor of the JCS, basic pay is $7,489.80.
+            Basic pay rate for Academy Cadets/Midshipmen and ROTC members/applicants is $974.40.</td>
+        </tr><tr><td> </td>
+          <td><strong>Over 16</strong></td>
+          <td><strong>Over 18</strong></td>
+          <td><strong>Over 20</strong></td>
+          <td><strong>Over 22</strong></td>
+          <td><strong>Over 24</strong></td>
+          <td><strong>Over 26</strong></td>
+          <td><strong>Over 30</strong></td>
+          <td><strong>Over 34</strong></td>
+          <td><strong>Over 38</strong></td>
+        </tr><tr><td><strong>E-9</strong></td>
+          <td>$5,195</td>
+          <td>$5,357</td>
+          <td>$5,617</td>
+          <td>$5,837</td>
+          <td>$6,069</td>
+          <td>$6,423</td>
+          <td>$6,743</td>
+          <td>$7,081</td>
+          <td>$7,435</td>
+        </tr><tr><td><strong>E-8</strong></td>
+          <td>$4,469</td>
+          <td>$4,720</td>
+          <td>$4,848</td>
+          <td>$5,065</td>
+          <td>$5,185</td>
+          <td>$5,481</td>
+          <td>$5,591</td>
+          <td>$5,591</td>
+          <td>$5,591</td>
+        </tr><tr><td><strong>E-7</strong></td>
+          <td>$4,158</td>
+          <td>$4,281</td>
+          <td>$4,329</td>
+          <td>$4,487</td>
+          <td>$4,573</td>
+          <td>$4,898</td>
+          <td>$4,898</td>
+          <td>$4,898</td>
+          <td>$4,898</td>
+        </tr><tr><td><strong>E-6</strong></td>
+          <td>$3,600</td>
+          <td>$3,651</td>
+          <td>$3,651</td>
+          <td>$3,651</td>
+          <td>$3,651</td>
+          <td>$3,651</td>
+          <td>$3,651</td>
+          <td>$3,651</td>
+          <td>$3,651</td>
+        </tr><tr><td><strong>E-5</strong></td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+          <td>$3,064</td>
+        </tr><tr><td><strong>E-4</strong></td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+          <td>$2,403</td>
+        </tr><tr><td><strong>E-3</strong></td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+          <td>$2,015</td>
+        </tr><tr><td><strong>E-2</strong></td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+          <td>$1,700</td>
+        </tr><tr><td><strong>E-1</strong></td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td>$1,516</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr></tbody></table>
+              
+
+    <a class="button hidden-lg-up button-expand" href="javascript:void(0);">Show Full Article</a>
+  </div>
+
+  
+
+
+
+
+
+
+    <div class="field field--keywords field--label-inline">      <label>Related Topics:</label>                  <a href="/topics/military-pay" hreflang="en">Military Pay</a>
+              </div>
+
+
+  
+
+
+
+<div class="copyright">
+  &copy; Copyright 2022 Military.com. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</div>
+
+  
+      <div class="sponsor-ads">
+      <!-- see theme preprocess for this ad -->
+      <div class="oas-ad-block x88"><div id="adblock-sponsor-ads"></div></div>
+      <div class="oas-ad-block x63"><div id="adblock-sponsor-ads2"></div></div>
+    </div>
+  
+  
+
+  
+
+        <div class="below-body-ads">
+      <!-- see theme preprocess for this ad -->
+      <div class="oas-ad-block position2"><div id="adblock-below-body-ads"></div></div>
+    </div>
+  
+</article>
+
+
+
+    
+  
+
+
+
+      <div class="views-element-container block block--articles--related">
+    
+      <h2 class="block__title">You May Also Like</h2>
+    
+
+      
+
+
+
+
+<div class="view view--articles view--articles--block-you-may-also-like view-id-articles view-display-id-block_you_may_also_like js-view-dom-id-9bcda9befb32185898b657ce199e23bda7d0ed1938bfb19e3776622de231f082">
+  
+    
+      
+      <div class="view__content">
+      <div class="list-view">
+      
+
+
+
+
+<article role="article" about="/daily-news/2022/09/16/major-cut-cost-of-living-allowances-planned-then-put-hold-service-members-hawaii.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="Major Cut to Cost-of-Living Allowances Planned, Then Put on Hold for Service Members in Hawaii" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/daily-news/2022/09/16/major-cut-cost-of-living-allowances-planned-then-put-hold-service-members-hawaii.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-hawaii-national-guard-food-drive-1800.jpg?itok=D5jNQ6aB 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-hawaii-national-guard-food-drive-1800.jpg?itok=D5jNQ6aB 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_325x325/public/2022-09/mil-hawaii-national-guard-food-drive-1800.jpg?itok=Q6euuX4- 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_650x650/public/2022-09/mil-hawaii-national-guard-food-drive-1800.jpg?itok=bZ0-1fEg 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-hawaii-national-guard-food-drive-1800.jpg?itok=D5jNQ6aB" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="Members of the Hawaii National Guard distribute groceries." title="Members of the Hawaii National Guard team with Maui county officials and volunteers to distribute groceries at a community food drive, Wailuku, Hawaii, Apr. 24, 2020 (U.S. Army National Guard photo by Sgt. 1st Class Theresa Gualdarama)" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">Major Cut to Cost-of-Living Allowances Planned, Then Put on Hold for Service Members in Hawaii</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>Marine Corps Forces Pacific Headquarters warned that cuts to the allowances could translate to a &quot;$280-$500 per month&quot;...</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+      
+
+
+
+
+<article role="article" about="/daily-news/2022/09/15/air-force-cuts-pay-thousands-those-cyber-skills-now-eligible-big-reenlistment-bonuses.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="As Air Force Cuts Pay for Thousands, Those with Cyber Skills Now Eligible for Big Reenlistment Bonuses" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/daily-news/2022/09/15/air-force-cuts-pay-thousands-those-cyber-skills-now-eligible-big-reenlistment-bonuses.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-airman-cyber-operations-1800_0.jpg?itok=FIDmjLf4 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-airman-cyber-operations-1800_0.jpg?itok=FIDmjLf4 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/max_325x325/public/2022-09/mil-airman-cyber-operations-1800_0.jpg?itok=KzXkBYLR 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/max_650x650/public/2022-09/mil-airman-cyber-operations-1800_0.jpg?itok=IhDXN8lc 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images03.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-airman-cyber-operations-1800_0.jpg?itok=FIDmjLf4" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="Airman performs network analysis during exercise Tacet Venari." title="U.S. Air Force mission defense team supervisor with the 52nd Communications Squadron, assigned to Spangdahlem Air Base, Germany, performs network analysis during exercise Tacet Venari at Ramstein Air Base, Germany, May 17, 2022. (U.S. Air Force photo by Airman 1st Class Jared Lovett)" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">As Air Force Cuts Pay for Thousands, Those with Cyber Skills Now Eligible for Big Reenlistment Bonuses</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>While dozens of enlisted jobs are expecting cuts to special duty assignment pay, no cyber-related careers are at risk of...</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+      
+
+
+
+
+<article role="article" about="/daily-news/2022/09/15/bill-would-boost-coast-guard-benefits-pay-members-during-federal-shutdowns.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="Bill Would Boost Coast Guard Benefits, Pay Members During Federal Shutdowns" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/daily-news/2022/09/15/bill-would-boost-coast-guard-benefits-pay-members-during-federal-shutdowns.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-coast-guard-search-rescue-miami-1800.jpg?itok=0SK6GcTI 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-coast-guard-search-rescue-miami-1800.jpg?itok=0SK6GcTI 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/max_325x325/public/2022-09/mil-coast-guard-search-rescue-miami-1800.jpg?itok=Ue3oRXVI 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images03.military.com/sites/default/files/styles/max_650x650/public/2022-09/mil-coast-guard-search-rescue-miami-1800.jpg?itok=-W-l_DGA 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images03.military.com/sites/default/files/styles/thumbnail_large/public/2022-09/mil-coast-guard-search-rescue-miami-1800.jpg?itok=0SK6GcTI" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="Coast Guard Air Station Miami aircrew conducts a search and rescue exercise." title="An aircrew from Coast Guard Air Station Miami conducts a search and rescue exercise in Miami Oct. 11, 2021. (U.S. Coast Guard photo by Petty Officer 1st Class Travis Magee)" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">Bill Would Boost Coast Guard Benefits, Pay Members During Federal Shutdowns</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>The Senate&#039;s version of the fiscal 2023 Coast Guard authorization bill contains a number of provisions aimed at recruiting...</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+      
+
+
+
+
+<article role="article" about="/benefits/military-pay/state-retirement-income-tax.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="Military Retirement and State Income Tax" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/benefits/military-pay/state-retirement-income-tax.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images01.military.com/sites/default/files/styles/thumbnail_large/public/paycheck-thumbnails/2016/02/What-State-Do-I-File-My-Taxes.jpg?itok=mHlnCXHd 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images01.military.com/sites/default/files/styles/thumbnail_large/public/paycheck-thumbnails/2016/02/What-State-Do-I-File-My-Taxes.jpg?itok=mHlnCXHd 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images01.military.com/sites/default/files/styles/max_325x325/public/paycheck-thumbnails/2016/02/What-State-Do-I-File-My-Taxes.jpg?itok=lOPGOjch 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images01.military.com/sites/default/files/styles/max_650x650/public/paycheck-thumbnails/2016/02/What-State-Do-I-File-My-Taxes.jpg?itok=zzOSCQAS 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images01.military.com/sites/default/files/styles/thumbnail_large/public/paycheck-thumbnails/2016/02/What-State-Do-I-File-My-Taxes.jpg?itok=mHlnCXHd" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">Military Retirement and State Income Tax</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>Some states exempt all or a portion of military retired pay from income taxation.</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+  </div>
+
+    </div>
+  
+        </div>
+
+
+        </div>
+  
+
+
+
+            </div>
+            <div id="bodySidebar" class="page__sidebar col-md-4">
+                
+  
+
+
+
+      <div class="block block--article-sidebar">
+    
+    
+
+      
+
+
+
+
+
+
+                            
+
+
+
+
+
+
+
+                            
+
+
+
+
+
+<div id="paragraph-8336" class="paragraph paragraph--list-view paragraph--default">
+            
+
+
+
+
+
+
+    <h2 class="field field--title field--label-hidden paragraph__title">                        Military Pay Topics
+              </h2>
+
+
+
+
+
+
+
+                              
+    
+
+
+
+
+<div class="list-view list-view--two-col-bullet">
+         <div class="items">
+    <ul>
+                        <li class="text--title"><a href="/benefits/military-pay" hreflang="en">Military Pay</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/calculator" hreflang="en">Military Pay Calculator</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/charts" hreflang="en">2022 Military Pay Charts</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/basic-allowance-for-housing" hreflang="en">2022 Basic Allowance for Housing (BAH)</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/allowances" hreflang="en">Allowances</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/basic-pay" hreflang="en">Military Basic Pay</a></li>
+                                <li class="text--title"><a href="/benefits/military-pay/bonus" hreflang="en">Military Bonuses</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/reserve-and-guard-pay" hreflang="en">Reserve &amp; Guard Pay</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/retired-pay" hreflang="en">Military Retirement Pay</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/special-pay" hreflang="en">Special Pay</a></li>
+                  <li class="text--title"><a href="/benefits/military-pay/veteran-pay" hreflang="en">Military Veteran Pay</a></li>
+                  </ul>
+  </div>
+  </div>
+
+              
+
+      </div>
+
+                        
+  
+
+
+
+
+<div id="paragraph-10751" class="paragraph paragraph--block paragraph--default paragraph--mil-ad-block">
+            
+
+
+
+
+
+
+    <div class="field field--block field--label-hidden">                        
+  
+
+
+
+      <div class="block block--appnexus">
+    
+    
+
+      <div id="adblock-5b871bbb87bb8-RightTop"></div>
+        </div>
+  
+
+              </div>
+
+      </div>
+
+                        
+  
+    
+
+
+
+<div id="paragraph-10746" class="paragraph paragraph--block paragraph--default paragraph--mil-auth-my-membership">
+      
+<div class="my-membership-block-wrapper hide-title">
+  <div id="selectServiceWrapper">
+    <div class="component">
+      <h2 id="selectServiceTitle" class="field--title">Select Service</h2>
+            
+
+
+
+    
+    
+
+      
+
+
+
+
+
+
+    <div class="field field--block field--label-hidden">                        
+  
+
+
+
+      <div class="block block--mymembership">
+    
+    
+
+      
+
+<div class="myService" id="noServiceSelected">
+  <ul id="serviceList">
+    <li class="service army"><a href="https://www.military.com/newmembers/army" title="Army login link"><span>Army</span></a></li>
+    <li class="service marine"><a href="https://www.military.com/newmembers/marines" title="Marines login link"><span>Marines</span></a></li>
+    <li class="service navy"><a href="https://www.military.com/newmembers/navy" title="Navy login link"><span>Navy</span></a></li>
+    <li class="service airfrc"><a href="https://www.military.com/newmembers/airforce" title="Air Force login link"><span>Air Force</span></a></li>
+    <li class="service ngres"><a href="https://www.military.com/newmembers/guard" title="National Guard login link"><span>National Guard</span></a></li>
+    <li class="service coastg"><a href="https://www.military.com/newmembers/coastguard" title="Coast Guard login link"><span>Coast Guard</span></a></li>
+    <li class="service spacefrc"><a href="https://www.military.com/newmembers/space-force" title="Space Force login link"><span>Space Force</span></a></li>
+    <li class="service spouse"><a href="https://www.military.com/newmembers/spouse" title="Spouse login link"><span>Spouse</span></a></li>
+  </ul>
+  <div class="login">
+    <a href="https://www.military.com/member-reg/login.html" title="Login link"><span>Login</span></a>
+  </div>
+</div>
+<div class="myService" id="armyServiceSelected">
+  <a class="logo army" href="https://www.military.com/army" title="Army page link"><span>Army</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/army">Army Home Page</a>
+  </div>
+</div>
+<div class="myService" id="navyServiceSelected">
+  <a class="logo navy" href="https://www.military.com/navy" title="Navy page link"><span>Navy</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/navy">Navy Home Page</a>
+  </div>
+</div>
+<div class="myService" id="airfrcServiceSelected">
+  <a class="logo airforce" href="https://www.military.com/air-force" title="Air Force page link"><span>Air Force</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/air-force">Air Force Home Page</a>
+  </div>
+</div>
+<div class="myService" id="marineServiceSelected">
+  <a class="logo marines" href="https://www.military.com/marine-corps" title="Marines page link"><span>Marines</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/marine-corps">Marines Home Page</a>
+  </div>
+</div>
+<div class="myService" id="coastgServiceSelected">
+  <a class="logo coastguard" href="https://www.military.com/coast-guard" title="Coast Guard page link"><span>Coast Guard</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/coast-guard">Coast Guard Home Page</a>
+  </div>
+</div>
+<div class="myService" id="spcfrcServiceSelected">
+  <a class="logo spaceforce" href="https://www.military.com/space-force" title="Space Force page link"><span>Space Force</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/space-force">Space Force Home Page</a>
+  </div>
+</div>
+<div class="myService" id="ngServiceSelected">
+  <a class="logo nationalguard" href="https://www.military.com/national-guard" title="National Guard page link"><span>National Guard</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/national-guard">National Guard Home Page</a>
+  </div>
+</div>
+<div class="myService" id="spouseServiceSelected">
+  <a class="logo spouse" href="https://www.military.com/spouse" title="Spouse page link"><span>Spouse</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/spouse">Spouse Home Page</a>
+  </div>
+</div>
+<div class="myService" id="otherServiceSelected">
+  <a class="logo military" href="https://www.military.com/daily-news" title="Military News page link"><span>&nbsp;</span></a>
+  <div class="links">
+    <a href="https://www.military.com/profile/member-profile.html">My Profile</a>
+    <a href="https://www.military.com/daily-news">News Home Page</a>
+  </div>
+</div>
+
+
+
+        </div>
+  
+
+              </div>
+
+        </div>
+  </div>
+</div>
+  </div>
+
+                        
+
+
+
+
+
+<div id="paragraph-6781" class="paragraph paragraph--list-view paragraph--default">
+            
+
+
+
+
+
+
+    <h2 class="field field--title field--label-hidden paragraph__title">                        Benefits Directory
+              </h2>
+
+
+
+
+
+
+
+                            
+    
+
+
+
+
+<div class="list-view list-view--one-col">
+         <ul>
+          <li class="text--title"><a href="/benefits/active-duty" hreflang="en">Active Duty</a></li>
+          <li class="text--title"><a href="/benefits/retirees" hreflang="en">Benefits for Retirees</a></li>
+          <li class="text--title"><a href="/benefits/veteran-benefits" hreflang="en">Veteran Benefits</a></li>
+          <li class="text--title"><a href="/benefits/spouse-family" hreflang="en">Military Spouse &amp; Family</a></li>
+          <li class="text--title"><a href="/benefits/reserve-guard" hreflang="en">Reserve &amp; Guard</a></li>
+          <li class="text--title"><a href="/money/va-loans" hreflang="en">VA Loans</a></li>
+          <li class="text--title"><a href="/benefits/directory" hreflang="en">Benefits Directory</a></li>
+      </ul>
+  </div>
+
+              
+
+      </div>
+
+                        
+  
+
+
+
+
+<div id="paragraph-10736" class="paragraph paragraph--block paragraph--default paragraph--mil-ad-block">
+            
+
+
+
+
+
+
+    <div class="field field--block field--label-hidden">                        
+  
+
+
+
+      <div class="block block--appnexus">
+    
+    
+
+      <div id="adblock-5bbf8c897a44a-FP1"></div>
+        </div>
+  
+
+              </div>
+
+      </div>
+
+                        
+  
+
+
+
+
+<div id="paragraph-21586" class="paragraph paragraph--block paragraph--default paragraph--mil-ad-block">
+            
+
+
+
+
+
+
+    <div class="field field--block field--label-hidden">                        
+  
+
+
+
+      <div class="block block--appnexus">
+    
+    
+
+      <div id="adblock-5bbf8c897a574-RightBottom"></div>
+        </div>
+  
+
+              </div>
+
+      </div>
+
+                        
+
+
+
+
+
+<div id="paragraph-50541" class="paragraph paragraph--cta paragraph--default">
+            
+
+
+
+
+
+
+    <div class="field field--call-to-action field--label-hidden">                        
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<div
+  id="cta-nl-MILPAY_MAIN_NLET_SIGNUP"
+  class="call-to-action--nl  image-no-variant image-no-bg    cta-nl--loading cta-nl--hidden"
+  data-nl-id="4,5,13"
+  data-nl-isrc="MILPAY_MAIN_NLET_SIGNUP"
+  data-nl-esrc=""
+  style=" "
+>
+
+  <div class="cta-container cta-default">
+    <div class="cta-nl--logo">
+      <img src="/themes/military/assets/images/m-logo-rect-blue.png" alt="">
+    </div>
+
+
+
+    <div class="cta-nl--content">
+
+      <div class="cta-nl--image" style="background-image: url('/themes/military/assets/images/nl-cta-patch-popup.jpg');"></div>
+
+      <div class="cta-nl--main">
+
+        <div class="cta-state-signup">
+
+          <div class="text-content">
+            <h2>
+
+
+
+
+
+
+                            Get the Military Insider Newsletter
+              
+</h2>
+                          <p class="blurb">Get the latest on pay updates, benefit changes and award-winning military content. Right in your inbox.</p>
+                      </div>
+
+          <form class="cta-nl--form">
+            <label class="user-email--label">Email</label>
+            <input class="user-email" type="email" placeholder="" aria-label="Enter your email">
+            
+            <button type="submit" class="cta-nl--submit" style=" " aria-label=" Subscribe Now ">Subscribe Now</button>
+          </form>
+          <div class="disclaimer">By signing up, you agree to our <a href="/about-us/privacy-policy">Privacy Notice</a>.</div>
+        </div>
+
+        <div class="cta-state--message">
+
+          <div class="message--thank-you">
+                        <div class="message--heading">
+              <span class="large">Thank you</span>
+              <span>for subscribing!</span>
+            </div>
+            <p>View more newsletters on our <a href="/profile/member-profile-newsletter-settings.html">Subscriptions</a> page.</p>
+          </div>
+
+          <div class="message--confirmation">
+                        <div class="message--heading">
+              <span class="large">One last step.</span>
+            </div>
+            <p>Verify your free subscription by following the instructions in the email sent to:</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    
+    <noscript>Please enable JavaScript to view this element.</noscript>
+
+  </div>
+
+</div>
+
+
+
+
+
+              </div>
+
+      </div>
+
+                        
+
+
+
+
+
+<div id="paragraph-29561" class="paragraph paragraph--list-view paragraph--default">
+            
+
+
+
+
+
+
+    <h2 class="field field--title field--label-hidden paragraph__title">                        Military Pay News &amp; Advice
+              </h2>
+
+
+
+
+<div class="list-view list-view--one-col">
+         <ul>
+          <li class="text--title"><a href="/daily-news/2022/09/16/major-cut-cost-of-living-allowances-planned-then-put-hold-service-members-hawaii.html">Major Cut to Cost-of-Living Allowances Planned, Then Put on Hold for Service Members in Hawaii</a></li>
+          <li class="text--title"><a href="/money/personal-finance/tis-season-start-christmas-savings-plan.html">&#039;Tis the Season to Start a Christmas Savings Plan</a></li>
+          <li class="text--title"><a href="/money/personal-finance/why-savings-bonds-are-your-best-hedge-against-inflation.html">Why Savings Bonds Are Your Best Hedge Against Inflation</a></li>
+          <li class="text--title"><a href="/money/personal-finance/taxes/what-are-estimated-taxes-and-who-should-pay-them.html">What Are Estimated Taxes and Who Should Pay Them?</a></li>
+          <li class="text--title"><a href="/money/insurance/supplemental-life/military-members-and-veterans-are-financially-savvy-usaa-life-insurance-survey-shows.html">Military Members and Veterans Are Financially Savvy, USAA Life Insurance Survey Shows</a></li>
+      </ul>
+      
+
+
+
+          
+  <a href="/topics/personal-finance" class="view__more-link">View more</a>
+  </div>
+
+      </div>
+
+                        
+
+
+
+
+
+<div id="paragraph-19471" class="paragraph paragraph--linked-image paragraph--default">
+        
+      <a href="https://www.military.com/profile/member-profile-newsletter-settings.html?newsletter=13">
+      
+
+
+
+
+
+
+    <div class="field field--image field--label-hidden">                        
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div class="field field--image field--label-hidden">                            <picture>
+                  <source srcset="//images02.military.com/sites/default/files/styles/full/public/media/membership/2017/05/nl-sign-up-military-report.jpg?itok=0S0xLMu- 1x" media="(min-width: 1200px)" type="image/jpeg"/>
+              <source srcset="//images02.military.com/sites/default/files/styles/full/public/media/membership/2017/05/nl-sign-up-military-report.jpg?itok=0S0xLMu- 1x" media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg"/>
+              <source srcset="//images02.military.com/sites/default/files/styles/full/public/media/membership/2017/05/nl-sign-up-military-report.jpg?itok=0S0xLMu- 1x" media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg"/>
+              <source srcset="//images02.military.com/sites/default/files/styles/full/public/media/membership/2017/05/nl-sign-up-military-report.jpg?itok=0S0xLMu- 1x" media="(max-width: 767px)" type="image/jpeg"/>
+                  <img src="//images02.military.com/sites/default/files/styles/full/public/media/membership/2017/05/nl-sign-up-military-report.jpg?itok=0S0xLMu-" alt="Sign up for the Benefits Newsletter" typeof="foaf:Image" />
+
+  </picture>
+
+
+              </div>
+
+  </figure>
+
+              </div>
+
+      </a>
+    </div>
+
+                        
+
+
+
+
+
+<div id="paragraph-17266" class="paragraph paragraph--list-view paragraph--default">
+            
+
+
+
+
+
+
+    <h2 class="field field--title field--label-hidden paragraph__title">                        Top Benefits Articles
+              </h2>
+
+
+
+
+
+
+
+                            
+
+
+
+  <div class="list-view list-view--vertical-thumb-left list--view--thumbnail-large">
+          
+
+
+
+
+<article role="article" about="/benefits/military-pay/charts/military-pay-charts.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="2022 Military Pay Charts" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/benefits/military-pay/charts/military-pay-charts.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images05.military.com/sites/default/files/styles/thumbnail_large/public/media/money/pay/2011/11/military-pay-charts-412x274.jpg?itok=lsRw1zde 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images05.military.com/sites/default/files/styles/thumbnail_large/public/media/money/pay/2011/11/military-pay-charts-412x274.jpg?itok=lsRw1zde 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images05.military.com/sites/default/files/styles/max_325x325/public/media/money/pay/2011/11/military-pay-charts-412x274.jpg?itok=_rFnHDDF 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images05.military.com/sites/default/files/styles/max_650x650/public/media/money/pay/2011/11/military-pay-charts-412x274.jpg?itok=DeZ4Hh3l 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images05.military.com/sites/default/files/styles/thumbnail_large/public/media/money/pay/2011/11/military-pay-charts-412x274.jpg?itok=lsRw1zde" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="Military Pay Charts" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">2022 Military Pay Charts</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>Check out the 2022 US military pay scale charts for all ranks for active duty, as well as Reserve and Guard components.</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+
+
+
+
+<article role="article" about="/benefits/military-pay/charts/proposed-pay-charts.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="2023 Proposed Military Pay Raise" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/benefits/military-pay/charts/proposed-pay-charts.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2020-08/background-of-the-many-american-one-hundred-dollar-banknotes-picture-id1160534857.jpg?itok=-NO8ByGx 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2020-08/background-of-the-many-american-one-hundred-dollar-banknotes-picture-id1160534857.jpg?itok=-NO8ByGx 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_325x325/public/2020-08/background-of-the-many-american-one-hundred-dollar-banknotes-picture-id1160534857.jpg?itok=ybHN4ETJ 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_650x650/public/2020-08/background-of-the-many-american-one-hundred-dollar-banknotes-picture-id1160534857.jpg?itok=7ngBN3k- 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2020-08/background-of-the-many-american-one-hundred-dollar-banknotes-picture-id1160534857.jpg?itok=-NO8ByGx" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="Picture of $100 bills" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">2023 Proposed Military Pay Raise</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>A 4.6% pay raise has been proposed for 2023, but will it keep up with inflation?</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+
+
+
+
+<article role="article" about="/benefits/veterans-health-care/va-disability-pay-rates.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="See Your 2022 VA Disability Pay Rates" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/benefits/veterans-health-care/va-disability-pay-rates.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--block-you-may-also-like blazy--view blazy--view--articles blazy--view--articles--block-you-may-also-like field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2020-05/cash-money-3200.jpg?itok=gRFyuoNi 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2020-05/cash-money-3200.jpg?itok=gRFyuoNi 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_325x325/public/2020-05/cash-money-3200.jpg?itok=Tq9YbBF7 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_650x650/public/2020-05/cash-money-3200.jpg?itok=Bwcj7ehp 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images04.military.com/sites/default/files/styles/thumbnail_large/public/2020-05/cash-money-3200.jpg?itok=gRFyuoNi" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="U.S. money is counted." title="(U.S. Marine Corps/Enrique S. Diaz)" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">See Your 2022 VA Disability Pay Rates</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>The current VA disability pay rates show compensation for veterans with a disability rating 10% or higher. Read more.</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+
+
+
+
+<article role="article" about="/benefits/military-pay/military-retired-pay-overview.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="Military Retired Pay Overview" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/benefits/military-pay/military-retired-pay-overview.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images02.military.com/sites/default/files/styles/thumbnail_large/public/media/benefits/2015/10/retired1.jpg?itok=xF8ZzLg3 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images02.military.com/sites/default/files/styles/thumbnail_large/public/media/benefits/2015/10/retired1.jpg?itok=xF8ZzLg3 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images02.military.com/sites/default/files/styles/max_325x325/public/media/benefits/2015/10/retired1.jpg?itok=vFGFwebl 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images02.military.com/sites/default/files/styles/max_650x650/public/media/benefits/2015/10/retired1.jpg?itok=llNbjNVx 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images02.military.com/sites/default/files/styles/thumbnail_large/public/media/benefits/2015/10/retired1.jpg?itok=xF8ZzLg3" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="There are many financial considerations when planning for retirement" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">Military Retired Pay Overview</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>The military retirement system is arguably the best one around, but proper planning is needed to ensure you can retire...</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+
+
+
+
+<article role="article" about="/benefits/veterans-health-care/va-benefits-disability-compensation.html" typeof="schema:Article" class="node node--article node--article--thumbnail-large">
+  
+    <span property="schema:name" content="VA Benefits: Disability Compensation" class="hidden"></span>
+
+
+  
+          
+  
+
+
+<div class="thumbnail--large">
+  <a href="/benefits/veterans-health-care/va-benefits-disability-compensation.html">
+    <div class="thumbnail--large__image">
+      
+<div class="image">
+  
+<i class="icon icon-photo_size_select_actual"></i>
+  
+
+
+
+
+<figure>  
+
+
+
+
+
+
+    <div data-blazy="" class="blazy blazy--field blazy--field-image blazy--field-image--thumbnail-large field field--image field--label-hidden">                        
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <picture>
+                  <source media="(min-width: 1200px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/media/benefits/2017/05/va.jpg?itok=Tf6A_2Gm 1x"/>
+              <source media="(min-width: 992px) and (max-width: 1199px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/thumbnail_large/public/media/benefits/2017/05/va.jpg?itok=Tf6A_2Gm 1x"/>
+              <source media="(min-width: 768px) and (max-width: 991px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_325x325/public/media/benefits/2017/05/va.jpg?itok=H3rSOgeW 1x"/>
+              <source media="(max-width: 767px)" type="image/jpeg" data-srcset="//images04.military.com/sites/default/files/styles/max_650x650/public/media/benefits/2017/05/va.jpg?itok=IaX9kE1x 1x"/>
+                  <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="//images04.military.com/sites/default/files/styles/thumbnail_large/public/media/benefits/2017/05/va.jpg?itok=Tf6A_2Gm" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 200 133&#039;%2F%3E" alt="Veterans Affairs VA Seal" typeof="foaf:Image" />
+
+  </picture>
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+
+              </div>
+
+  </figure>
+
+</div>
+    </div>
+
+    <div class="thumbnail--large__content">
+      <span class="text--title"><span property="schema:name">VA Benefits: Disability Compensation</span>
+</span>
+              <div class="text--small thumbnail--large__blurb">
+          
+
+
+
+
+
+
+    <div class="field field--summary field--label-hidden">                        <p>Disability compensation is paid to veterans disabled by an injury or illness that was incurred or aggravated during active...</p>
+
+              </div>
+
+        </div>
+          </div>
+  </a>
+</div>
+</article>
+
+  </div>
+
+              
+
+      </div>
+
+                        
+  
+
+
+
+
+<div id="paragraph-10741" class="paragraph paragraph--block paragraph--default paragraph--mil-ad-block">
+            
+
+
+
+
+
+
+    <div class="field field--block field--label-hidden">                        
+  
+
+
+
+      <div class="block block--appnexus">
+    
+    
+
+      <div id="adblock-5bbf8c897a6c0-FP2"></div>
+        </div>
+  
+
+              </div>
+
+      </div>
+
+                        
+
+
+
+
+
+<div id="paragraph-18561" class="paragraph paragraph--list-view paragraph--default">
+            
+
+
+
+
+
+
+    <h2 class="field field--title field--label-hidden paragraph__title">                        Most Popular VA Loan Articles
+              </h2>
+
+
+
+
+<div class="list-view list-view--one-col">
+         <ul>
+          <li class="text--title"><a href="/money/va-loans/home-updates-are-va-loan-buyer-friendly.html">Home Updates That Are VA Loan Buyer Friendly</a></li>
+          <li class="text--title"><a href="/money/va-loans/4-outright-lies-veterans-believe-about-va-home-loans.html">4 Outright Lies Veterans Believe About VA Home Loans</a></li>
+          <li class="text--title"><a href="/money/va-loans/history-of-va-home-loans-and-why-veterans-are-more-likely-own-home.html">Veterans Are More Likely to Own a Home. Here&#039;s Why.</a></li>
+          <li class="text--title"><a href="/daily-news/2022/07/15/va-just-changed-home-loan-inspection-rule.html">The VA Just Changed This Home Loan Inspection Rule</a></li>
+          <li class="text--title"><a href="/money/personal-finance/3-factors-consider-when-buying-house-after-leaving-service.html">3 Factors to Consider When Buying a House After Leaving the Service</a></li>
+      </ul>
+      
+
+
+
+          
+  <a href="/topics/va-loan" class="view__more-link">View more</a>
+  </div>
+
+      </div>
+
+                        
+  
+
+
+
+
+<div id="paragraph-52951" class="paragraph paragraph--block paragraph--default paragraph--mil-ad-block">
+            
+
+
+
+
+
+
+    <div class="field field--block field--label-hidden">                        
+  
+
+
+
+      <div class="block block--appnexus">
+    
+    
+
+      <div id="adblock-5fff1f13e7019-Military-Desktop-Interstitial"></div>
+        </div>
+  
+
+              </div>
+
+      </div>
+
+                        
+  
+
+
+
+
+<div id="paragraph-52956" class="paragraph paragraph--block paragraph--default paragraph--mil-ad-block">
+            
+
+
+
+
+
+
+    <div class="field field--block field--label-hidden">                        
+  
+
+
+
+      <div class="block block--appnexus">
+    
+    
+
+      <div id="adblock-5fff1f13e709f-Military-Mobile-Interstitial"></div>
+        </div>
+  
+
+              </div>
+
+      </div>
+
+              
+
+
+              
+
+        </div>
+  
+
+
+            </div>
+          </div>
+              
+        
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-5f330e3b73386-MobileBottom"></div>
+        </div>
+  
+
+  
+
+
+
+      <div class="block block--mil-adsense">
+    
+    
+
+      <!-- Global Military.com Responsive Ad -->
+<ins class="adsbygoogle"
+     style="display:inline-block;min-width:320px;max-width:1200px;width:100%;height:300px"
+     data-ad-client="ca-pub-0218990756745158"
+     data-ad-slot="6328647708"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+  
+
+
+    </div>
+  </main>
+
+      
+<footer>
+  <div class="container">
+              
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-5ef128a5ca947-Bottom"></div>
+        </div>
+  
+
+
+
+
+      <nav class="block block--system-menu-block-military-network">
+    
+      <h2 class="block__title">Military.com Network</h2>
+    
+
+      
+
+
+
+
+        <ul class="menu">
+                            <li>
+                  <a href="/air-force" target="_self" rel="" data-drupal-link-system-path="node/3231">Air Force</a>
+                        </li>
+                <li>
+                  <a href="/army" target="_self" rel="" data-drupal-link-system-path="node/3241">Army</a>
+                        </li>
+                <li>
+                  <a href="/coast-guard" target="_self" rel="" data-drupal-link-system-path="node/3251">Coast Guard</a>
+                        </li>
+                <li>
+                  <a href="/marine-corps" target="_self" rel="" data-drupal-link-system-path="node/3256">Marine Corps</a>
+                        </li>
+                <li>
+                  <a href="/national-guard" target="_self" rel="" data-drupal-link-system-path="node/3266">National Guard</a>
+                        </li>
+                <li>
+                  <a href="/navy" target="_self" rel="" data-drupal-link-system-path="node/3271">Navy</a>
+                        </li>
+                <li>
+                  <a href="/space-force" target="_self" rel="" data-drupal-link-system-path="node/221226">Space Force</a>
+                        </li>
+        </ul>
+    
+
+
+        </nav>
+  
+
+
+
+      <nav class="block block--system-menu-block-social">
+    
+    
+
+      
+
+
+
+
+        <ul class="menu menu--social">
+                            <li>
+                  <a href="http://www.facebook.com/militarydotcom" class="link--facebook" aria-label="facebook">
+            
+<i class="icon icon-facebook"></i>
+          </a>
+              </li>
+                <li>
+                  <a href="http://instagram.com/militarydotcom" class="link--instagram" aria-label="instagram">
+            
+<i class="icon icon-instagram"></i>
+          </a>
+              </li>
+                <li>
+                  <a href="http://pinterest.com/Militarydotcom/" class="link--pinterest" aria-label="pinterest">
+            
+<i class="icon icon-pinterest"></i>
+          </a>
+              </li>
+                <li>
+                  <a href="http://www.twitter.com/militarydotcom" class="link--twitter" aria-label="twitter">
+            
+<i class="icon icon-twitter"></i>
+          </a>
+              </li>
+                <li>
+                  <a href="https://www.youtube.com/user/MilcomVids" class="link--youtube" aria-label="youtube">
+            
+<i class="icon icon-youtube"></i>
+          </a>
+              </li>
+        </ul>
+    
+
+
+        </nav>
+  
+
+
+
+      <nav class="block block--system-menu-block-about-military">
+    
+      <h2 class="block__title">About Military.com</h2>
+    
+
+      
+
+
+
+
+        <ul class="menu">
+                            <li>
+                  <a href="/about-us" target="_self" rel="" data-drupal-link-system-path="node/4771">About Us &amp; Press Room</a>
+                        </li>
+                <li>
+                  <a href="https://militarycom.freshdesk.com/support/solutions" target="_self">Help &amp; Feedback</a>
+                        </li>
+                <li>
+                  <a href="/about-us/apps" target="_self" rel="" data-drupal-link-system-path="node/1761">Mobile Apps</a>
+                        </li>
+                <li>
+                  <a href="/daily-news/military-rss-feeds.html" target="_self" rel="" data-drupal-link-system-path="node/46207">RSS</a>
+                        </li>
+                <li>
+                  <a href="/about-us/advertising-and-sales" target="_self" rel="" data-drupal-link-system-path="node/4786">Advertise with Us</a>
+                        </li>
+        </ul>
+    
+
+
+        </nav>
+  
+
+
+
+      <nav class="block block--system-menu-block-aux-footer-links">
+    
+    
+
+      
+
+
+
+
+        <ul class="menu">
+                            <li>
+                  <a href="/profile/member-profile-newsletter-settings.html" target="_self" rel="">Subscriptions</a>
+                        </li>
+                <li>
+                  <a href="/about-us/user-agreement" target="_self" rel="" data-drupal-link-system-path="node/4796">User Agreement</a>
+                        </li>
+                <li>
+                  <a href="/about-us/privacy-policy" target="_self" rel="" data-drupal-link-system-path="node/4801">Privacy Policy</a>
+                        </li>
+                <li>
+                  <a href="https://militarycom.freshdesk.com/a/solutions/articles/8000082651" target="_self" rel="">Do Not Sell My Personal Information</a>
+                        </li>
+                <li>
+                  <a href="" class="optanon-toggle-display">Cookie Preferences</a>
+                        </li>
+                <li>
+                  <a href="/sitemap" target="_self" rel="" data-drupal-link-system-path="node/3891">Site Map</a>
+                        </li>
+        </ul>
+    
+
+
+        </nav>
+  
+
+
+
+      <nav class="nav--mobile block block--system-menu-block-mobile-primary">
+    
+    
+
+      
+
+
+
+
+        <ul class="menu">
+                            <li>
+                  <a href="/about-us" target="_self" rel="" data-drupal-link-system-path="node/4771">About Us</a>
+                        </li>
+                <li>
+                  <a href="/about-us/advertising-and-sales" target="_self" rel="" data-drupal-link-system-path="node/4786">Advertise with Us</a>
+                        </li>
+                <li>
+                  <a href="/profile/member-profile-newsletter-settings.html" target="_self" rel="">Subscriptions</a>
+                        </li>
+        </ul>
+    
+
+
+        </nav>
+  
+
+
+
+      <nav class="nav--mobile block block--system-menu-block-mobile-secondary">
+    
+    
+
+      
+
+
+
+
+        <ul class="menu">
+                            <li>
+                  <a href="/about-us/privacy-policy" target="_self" rel="" data-drupal-link-system-path="node/4801">Privacy Policy</a>
+                        </li>
+                <li>
+                  <a href="https://militarycom.freshdesk.com/a/solutions/articles/8000082651" target="_self" rel="">Do Not Sell My Personal Information</a>
+                        </li>
+                <li>
+                  <a href="" class="optanon-toggle-display">Cookie Preferences</a>
+                        </li>
+        </ul>
+    
+
+
+        </nav>
+  
+
+
+
+      <div class="block block--copyright">
+    
+    
+
+      <div class="footer--meta text--small">
+	<div class="copyright">
+		<span th:utext="${'&amp;copy; 2022 Military Advantage'}">© 2022 Military Advantage</span>
+	</div>
+	<div class="logo--monster">
+		<span><img class="footer--monster-logo" src="//images.military.com/themes/military/logo-monster-footer.svg" alt="A Monster Company" /></span>
+	</div>
+	<div class="adchoices">
+		<span><a href="//preferences-mgr.truste.com/?pid=monster01&amp;aid=military_PublisherSolution&amp;type=military" target="_blank" title="AdChoices" class="adchoices">AdChoices <span class="adchoices-icon"><img src="https://images.military.com/sites/default/files/media/shared/css-global/2012/05/adchoices-icon.png" alt="AdChoices icon" /></span></a></span>
+	</div>
+</div>
+        </div>
+  
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-6125238b27d03-Military-Desktop-Anchor"></div>
+        </div>
+  
+
+  
+
+
+
+      <div class="block block--mil-ad-block">
+    
+    
+
+      <div id="adblock-6125239970d6f-AnchorAd"></div>
+        </div>
+  
+
+
+        </div>
+</footer>
+  </div>
+
+<!-- Segment Pixel - Military ROS Visitor - DO NOT MODIFY -->
+<script src="https://secure.adnxs.com/seg?add=17273707&t=1" type="text/javascript"></script>
+<!-- End of Segment Pixel -->
+
+
+  </div>
+
+      
+      <div id="mil-overlay"></div>
+      <script src="//images03.military.com/sites/default/files/js/js_MET3asRT6gCrBuO1D6krf22Pve-IaP8KlBERhnwz4Ws.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="//images05.military.com/sites/default/files/js/js_giFs_5ZR-dqx9qYUUhxsl_ETn4Ma_ElXSDJytfFSYdw.js"></script>
+<script src="https://tags.remixd.com/player/v5/index.js"></script>
+<script src="//images03.military.com/sites/default/files/js/js_b5MpRplRBKsbt686oKLaoK3SD0sJJmxqkkzWWeHgyEk.js"></script>
+
+              <!-- Extract Meta -->
+
+      
+          </div>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c3ba172f92","applicationID":"959924510","transactionName":"MQQHYEBQD0NYUE0NXwhOJFdGWA5eFndLEUAHDTlaXVUEbHpcVxBCCQ0JUUBtL19dVm8NVREiClpGQw5cVVZLSQ4QCABD","queueTime":0,"applicationTime":620,"atts":"HUMEFghKHE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

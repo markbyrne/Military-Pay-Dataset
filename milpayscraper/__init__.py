@@ -92,15 +92,15 @@ def scrape_pdf(file_name):
 
     data_df.replace(0.00, np.nan, inplace=True)
     data_df.replace('0.00', np.nan, inplace=True)
-    data_df.replace('0.00 0.00', np.nan, inplace=True)
+    data_df.replace("(\d+\.\d+) (\d+\.\d+)", "\\1, \\2", inplace=True, regex=True)
 
-    data_df[:] = data_df[:].replace("[$,]", "", regex=True).astype(float)
+    data_df[:] = data_df[:].replace("[$]", "", regex=True)
 
     print(data_df.head())
     data_df.to_csv(f'{datasets_dir}/annual_pay_scales/{os.path.basename(file_name)[:-4]}.csv', index=True)
 
 
 # get_AD_pay_charts()
-for file in ad_files_list:
-    scrape_pdf(f"{ad_dir}/{file}")
-# scrape_pdf(f"files/active_duty/AD-2018.pdf")
+# for file in ad_files_list:
+#     scrape_pdf(f"{ad_dir}/{file}")
+
